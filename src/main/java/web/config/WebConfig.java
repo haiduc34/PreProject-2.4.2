@@ -25,7 +25,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("web")
+@ComponentScan(value = {"web", "security"})
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 public class WebConfig implements WebMvcConfigurer {
