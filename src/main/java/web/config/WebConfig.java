@@ -2,7 +2,6 @@ package web.config;
 
 
 import org.hibernate.Session;
-import org.hibernate.engine.spi.SessionImplementor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
@@ -25,7 +24,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(value = {"web", "security"})
+@ComponentScan(value = {"web"})
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 public class WebConfig implements WebMvcConfigurer {
